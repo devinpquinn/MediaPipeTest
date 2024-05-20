@@ -39,7 +39,7 @@ namespace Mediapipe.Unity.Tutorial
             _inputTexture = new Texture2D(_width, _height, TextureFormat.RGBA32, false);
             _pixelData = new Color32[_width * _height];
 
-            _resourceManager = new LocalResourceManager();
+            _resourceManager = new StreamingAssetsResourceManager();
             yield return _resourceManager.PrepareAssetAsync("face_detection_short_range.bytes");
             yield return _resourceManager.PrepareAssetAsync("face_landmark_with_attention.bytes");
 
